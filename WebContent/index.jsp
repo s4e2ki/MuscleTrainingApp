@@ -11,7 +11,7 @@
 <body style="text-align: center">
 	<div>
 		<div>
-		<img src="./images/MuscleHustle.png" alt="ロゴ" width="550" height="120">
+		<img src="./images/MuscleHustle.png" alt="ロゴ" width="550" height="140">
 		</div>
 		<h2 class="h3 mt-2 mb-3 font-weight-normal">ログイン</h2>
 		<span style="color: red">${errorMsg}</span>
