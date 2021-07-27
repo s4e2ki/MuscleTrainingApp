@@ -84,7 +84,7 @@
 		</select><input type="submit" value="削除">
 	</form>
 	<hr>
-	<form action="InputServlet" method="get">
+	<form action="LoginServlet" method="get">
 		<input type="submit" value="戻る"> <br>
 	</form>
 	<script type="text/javascript">
