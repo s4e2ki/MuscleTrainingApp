@@ -24,7 +24,7 @@ public class MustleServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 
-		LogIn logIn = new LogIn()
+		LogIn logIn = new LogIn();
 	}
 
 }
