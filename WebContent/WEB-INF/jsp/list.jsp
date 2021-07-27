@@ -36,6 +36,19 @@
 		</tbody>
 	</table>
 	<hr>
+	<span style="color: red">${errorMsg}</span>
+	<form action="/MuscleTrainingApp/InputServlet" method="post">
+		重要度:<select name="importance">
+			<option value="5">5</option>
+			<option value="4">4</option>
+			<option value="3">3</option>
+			<option value="2">2</option>
+			<option value="1">1</option>
+		</select><br> 内容:<input type="text" name="content"><br> 期日:<input
+			type="date" name="deadline"><br> <input type="submit"
+			value="登録">
+	</form>
+	<hr>
 	<form action="UpdateServlet" method="post">
 		変更No<select name="no" id="no" onchange="selectboxChange();">
 		<c:forEach var="todo" items="${todoList}" varStatus="status">
