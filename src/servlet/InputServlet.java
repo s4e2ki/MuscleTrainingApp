@@ -35,7 +35,7 @@ public class InputServlet extends HttpServlet {
 		}
 		if (!errorMsg.equals("")) {
 			request.setAttribute("errorMsg", errorMsg);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/input.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/list.jsp");
 			dispatcher.forward(request, response);
 			return;
 		}
