@@ -25,12 +25,14 @@
 	</div>
 	<h2 style="text-align: center" style="font-family: 'Yomogi' , cursive">${user.name}さんの筋トレTODO</h2>
 	<hr>
+	<form action="/MuscleTrainingApp/HealthCheck" method="post">
 	<div style="text-align: center">
 	<h4>現在の体型を測定する</h4>
 	<input type="text" name="height" style="margin: 10px 10px" placeholder="身長">
 	<input type="text" name="weight" style="margin: 10px 10px" placeholder="体重">
 	<input type="submit" value="測定" style="margin: 10px 10px">
 	</div>
+	</form>
 	<hr>
 	<div style="text-align: center">
 		<h4>TODO追加フォーム</h4>
