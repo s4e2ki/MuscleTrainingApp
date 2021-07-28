@@ -9,7 +9,9 @@
 <script src="js/bootstrap.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap"
+	rel="stylesheet">
 <link rel="shortcut icon" href="images/favicon.ico">
 <link rel=stylesheet href="css/bootstrap.min.css">
 <title>TODOアプリ出力画面</title>
@@ -21,19 +23,24 @@
 	<div style="text-align: center">
 		<img src="./images/MuscleHustle.png" alt="ロゴ" width="400" height="100">
 	</div>
-	<h2 style="text-align: center" style="font-family: 'Yomogi' , cursive">${user.name}さんのTODO</h2>
-	<span style="color: red">${errorMsg}</span>
-	<form action="/MuscleTrainingApp/InputServlet" method="post">
-		重要度:<select name="importance">
-			<option value="5">5</option>
-			<option value="4">4</option>
-			<option value="3">3</option>
-			<option value="2">2</option>
-			<option value="1">1</option>
-		</select><br> 内容:<input type="text" name="content"><br> 期日:<input
-			type="date" name="deadline"><br> <input type="submit"
-			value="登録">
-	</form>
+	<h2 style="text-align: center" style="font-family: 'Yomogi' , cursive">${user.name}さんの筋トレTODO</h2>
+	<hr>
+	<div style="text-align: center">
+		<h4>TODO追加フォーム</h4>
+		<span style="color: red">${errorMsg}</span>
+		<form action="/MuscleTrainingApp/InputServlet" method="post">
+			<select name="importance" style="margin: 10px 10px">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select><input type="text" name="content" style="margin: 10px 10px"
+				placeholder="内容"> <input type="date" name="deadline"
+				style="margin: 10px 10px"> <input type="submit" value="登録"
+				style="margin: 10px 10px">
+		</form>
+	</div>
 	<hr>
 	<span style="color: red">${todo.errorMsg}</span>
 	<table class="table" border='1' id="targetTable">
@@ -57,32 +64,38 @@
 		</tbody>
 	</table>
 	<hr>
+	<div style="text-align: center">
 	<form action="UpdateServlet" method="post">
-		変更No<select name="no" id="no" onchange="selectboxChange();">
+		<h4>変更フォーム</h4>
+		<select name="no" id="no" onchange="selectboxChange();" style="margin: 10px 10px">
 			<c:forEach var="todo" items="${todoList}" varStatus="status">
 				<option value="${todo.id}">${status.count}</option>
 			</c:forEach>
-		</select> <select name="importance" id="importance">
+		</select> <select name="importance" id="importance" style="margin: 10px 10px">
 			<option value="5">5</option>
 			<option value="4">4</option>
 			<option value="3">3</option>
 			<option value="2">2</option>
 			<option value="1">1</option>
-		</select> <input type="text" name="content" id="content" size="20" value="">
-		<input type="date" name="deadline" id="deadline" value=""> <input
-			type="submit" value="変更">
+		</select> <input style="margin: 10px 10px" type="text" name="content" id="content" size="20" value="">
+		<input style="margin: 10px 10px" type="date" name="deadline" id="deadline" value=""> <input
+			type="submit" value="変更" style="margin: 10px 10px">
 	</form>
+	</div>
 	<hr>
+	<div style="text-align: center">
 	<c:if test="${not empty removeErrorMsg}">
 		<div class="alert alert-danger" role="alert">${removeErrorMsg}</div>
 	</c:if>
 	<form action="RemoveServlet" method="post">
-		削除No:<select name="no">
+	<h4>削除フォーム</h4>
+		<select name="no">
 			<c:forEach var="todo" items="${todoList}" varStatus="status">
 				<option value="${todo.id}">${status.count}</option>
 			</c:forEach>
 		</select><input type="submit" value="削除">
 	</form>
+	</div>
 	<hr>
 	<form action="LoginServlet" method="get">
 		<input type="submit" value="戻る"> <br>
