@@ -12,6 +12,6 @@
 		身長:${ health.height }<br> 体重:${ health.weight }<br>
 		BMI:${ health.bmi }<br> 体型:${ health.bodyType }<br>
 	</p>
-	<a href="/WEB-INF/jsp/input.jsp">戻る</a>
+	<a href="/WEB-INF/jsp/list.jsp">戻る</a>
 </body>
 </html>
