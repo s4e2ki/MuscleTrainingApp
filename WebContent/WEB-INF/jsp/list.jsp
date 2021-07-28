@@ -107,7 +107,7 @@
 	</div>
 	<hr>
 	<form action="LoginServlet" method="get">
-		<input type="submit" value="戻る"> <br>
+		<p style="text-align:center"><input type="submit" value="戻る"></p> <br>
 	</form>
 	<script type="text/javascript">
 		function selectboxChange() {

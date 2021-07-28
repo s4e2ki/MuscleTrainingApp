@@ -1,5 +1,4 @@
 package model;
-
 public class HealthCheckLogic {
 	public void execute(Health health) {
 		//BMIを算出して設定
@@ -9,13 +8,18 @@ public class HealthCheckLogic {
 		health.setBmi(bmi);
 		//BMI指数から体系を判定して設定
 		String bodyType;
+		String bodyTypeAdv;
 		if (bmi < 18.5) {
 			bodyType = "瘦せ型";
+			bodyTypeAdv = "もっと筋トレをして筋肉を付けましょう！";
 		} else if (bmi < 25) {
 			bodyType = "普通";
+			bodyTypeAdv = "このままその体系を維持しましょう！";
 		} else {
 			bodyType = "肥満";
+			bodyTypeAdv = "筋トレをして痩せましょう！";
 		}
 		health.setBodyType(bodyType);
+		health.setBodyTypeAdv(bodyTypeAdv);
 	}
 }
