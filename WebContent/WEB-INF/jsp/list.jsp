@@ -26,6 +26,13 @@
 	<h2 style="text-align: center" style="font-family: 'Yomogi' , cursive">${user.name}さんの筋トレTODO</h2>
 	<hr>
 	<div style="text-align: center">
+	<h4>現在の体型を測定する</h4>
+	<input type="text" name="height" style="margin: 10px 10px" placeholder="身長">
+	<input type="text" name="weight" style="margin: 10px 10px" placeholder="体重">
+	<input type="submit" value="測定" style="margin: 10px 10px">
+	</div>
+	<hr>
+	<div style="text-align: center">
 		<h4>TODO追加フォーム</h4>
 		<span style="color: red">${errorMsg}</span>
 		<form action="/MuscleTrainingApp/InputServlet" method="post">
@@ -77,7 +84,7 @@
 			<option value="3">3</option>
 			<option value="2">2</option>
 			<option value="1">1</option>
-		</select> <input style="margin: 10px 10px" type="text" name="content" id="content" size="20" value="">
+		</select> <input style="margin: 10px 10px" type="text" name="content" id="content" size="20" value="" placeholder="内容">
 		<input style="margin: 10px 10px" type="date" name="deadline" id="deadline" value=""> <input
 			type="submit" value="変更" style="margin: 10px 10px">
 	</form>
